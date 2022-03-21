@@ -77,11 +77,11 @@
             </div>
           </div>
         </div>
-        <div class="actions flex items-center justify-end mt-4 gap-4">
+        <div class="actions flex flex-wrap items-center justify-end mt-4 gap-4">
           <button
             :disabled="!dirtyForm"
             aria-label="Reset form"
-            class="btn disabled:bg-gray-300 disabled:hover:bg-gray-300"
+            class="btn disabled:bg-gray-300 disabled:hover:bg-gray-300 w-full sm:w-auto"
             type="button"
             @click="reset()"
           >
