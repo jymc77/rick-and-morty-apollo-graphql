@@ -2,7 +2,7 @@
   <img
     class="w-1/2 sm:w-1/4 mx-auto relative z-2"
     alt="Rick and Morty"
-    src="../assets/RickAndMortyLogo.webp"
+    src="../assets/rick-and-morty.webp"
     width="315px"
     height="225px"
   >
