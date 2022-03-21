@@ -24,7 +24,7 @@
       </div>
       <loader v-if="loading" />
       <list-characters
-        v-if="searchInit"
+        v-else-if="searchInit"
         :characters="result.characters"
       />
       <pagination
@@ -143,12 +143,13 @@ export default {
       });
     },
     search(filters) {
+      this.result.charaters = [];
+      this.result.info = null;
       this.loading = true;
       this.generateFiltersString(filters);
       this.getCharacters();
     },
     onPageChange(page) {
-      window.scrollTo(0, 0);
       this.getCharacters(page);
     },
   },
