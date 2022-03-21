@@ -48,9 +48,9 @@
             <div
               v-for="filter in filters.other"
               :key="filter.name"
-              class="relative flex mb-4"
+              class="relative flex mb-4 items-start md:items-center"
             >
-              <span class="label block mr-2 pt-0.5 capitalize min-w-[80px]">{{ filter.name }} :</span>
+              <span class="text-sm capitalize block mr-2 flex items-center min-w-[80px]">{{ filter.name }}</span>
               <div class="flex flex-wrap items-center gap-2">
                 <label
                   v-for="option in filter.options"
