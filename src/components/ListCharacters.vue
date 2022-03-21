@@ -34,28 +34,28 @@
           </template>
         </p>
         <p class="text-sm flex items-start justify-center sm:justify-start">
-          <span class="text-gray-600 mr-2 whitespace-nowrap w-[70px]">Species :</span>
-          <span class="truncate">{{ character.species }}</span>
+          <span class="text-gray-600 mr-2 whitespace-nowrap w-[70px] shrink-0">Species :</span>
+          <span class="truncate" :title="character.species">{{ character.species }}</span>
         </p>
         <p class="text-sm flex items-start justify-center sm:justify-start" v-if="character.type">
-          <span class="text-gray-600 mr-2 whitespace-nowrap w-[70px]">Type :</span>
-          <span class="truncate">{{ character.type }}</span>
+          <span class="text-gray-600 mr-2 whitespace-nowrap w-[70px] shrink-0">Type :</span>
+          <span class="truncate" :title="character.type">{{ character.type }}</span>
         </p>
         <p class="text-sm flex items-start justify-center sm:justify-start">
-          <span class="text-gray-600 mr-2 whitespace-nowrap w-[70px]">Gender :</span>
-          <span class="truncate">{{ character.gender }}</span>
+          <span class="text-gray-600 mr-2 whitespace-nowrap w-[70px] shrink-0">Gender :</span>
+          <span class="truncate" :title="character.gender">{{ character.gender }}</span>
         </p>
         <p class="text-sm flex items-start justify-center sm:justify-start">
-          <span class="text-gray-600 mr-2 whitespace-nowrap w-[70px]">Origine : </span>
+          <span class="text-gray-600 mr-2 whitespace-nowrap w-[70px] shrink-0">Origine : </span>
           <a
             :href="character.origin.url"
             target="_blank"
-            class="truncate"
+            class="truncate" :title="character.origin.name"
           >{{ character.origin.name }}</a>
         </p>
         <p class="text-sm flex items-start justify-center sm:justify-start mb-4 sm:mb-8">
-          <span class="text-gray-600 mr-2 whitespace-nowrap w-[70px]">Location : </span>
-          <span class="truncate">{{ character.location.name}}</span>
+          <span class="text-gray-600 mr-2 whitespace-nowrap w-[70px] shrink-0">Location : </span>
+          <span class="truncate" :title="character.location.name">{{ character.location.name}}</span>
         </p>
         <p class="mt-auto text-xs sm:text-sm self-end">
           <span v-if="character.episode.length > 1">
