@@ -58,8 +58,13 @@
           <span class="truncate">{{ character.location.name}}</span>
         </p>
         <p class="mt-auto text-xs sm:text-sm self-end">
-          <span>{{ character.name }}</span> appears in {{ character.episode.length }} {{ character.episode.length > 1 ? 'episodes' : 'episode'}}
-          and is first seen in episode {{ character.episode[0].episode }}.
+          <span v-if="character.episode.length > 1">
+            {{ character.name }} appears in {{ character.episode.length }} episodes and is first
+            seen in episode {{ character.episode[0].episode }}.
+          </span>
+          <span v-else>
+            {{ character.name }} appears in only 1 episode ({{ character.episode[0].episode }}).
+          </span>
         </p>
       </div>
     </div>
